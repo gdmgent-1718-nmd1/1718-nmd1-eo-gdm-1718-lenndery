@@ -335,6 +335,7 @@ section {
     'navbar_logo navbar_links navbar_account';
     grid-template-columns: auto auto 220px;
     grid-area: navbar;
+    height: fit-content;
     background: white;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -360,6 +361,9 @@ section {
     color: rgba(255, 255, 255, 0.575);
 }
 
+.searbar_toggle {
+    cursor: pointer;
+}
 
 .item2 {
     grid-area: buttons; 
