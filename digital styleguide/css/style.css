@@ -40,6 +40,10 @@ section {
     margin: 30px;
 }
 
+input {
+    user-select: all;
+}
+
 .sep {
     min-height: auto;
     border-left: 2px solid black;
@@ -168,6 +172,45 @@ section {
         transition: ease-in-out 0.15s;
     }
 
+    .item2 a {
+        margin: 0px 5px;
+    }
+
+/* INPUT */
+
+    .input_filter {
+        background-color: #f3f3f3;;
+        border: none;
+        outline: none;
+        margin-right: 20px;
+        padding: 10px;
+        font-size: 0.7rem;
+        color: black;
+        font-family: 'Montserrat', serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .input_data {
+        border: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.58);
+        outline: none;
+        padding: 10px;
+        font-size: 0.7rem;
+        color: black;
+        font-family: 'Montserrat', serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: ease-in-out 0.15s;
+    }
+
+    .input_data:focus {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        transition: ease-in-out 0.15s;
+    }
+
 /* CARDS */
     .container_card {
         position: relative;
@@ -202,6 +245,7 @@ section {
         height: 20px;
         fill: #df00006c;
         z-index: 1;
+        cursor: pointer;
     }
 
     #card_fav:hover {
@@ -300,6 +344,7 @@ section {
     'header header header header header header'
     'buttons title title title title title'
     'color title title title title title'
+    'input input input input input input'
     'cards cards cards cards cards cards'
     'icons icons icons icons icons icons';
     padding: 10px;
@@ -346,7 +391,7 @@ section {
 .searchbar {
     display: none;
     grid-area: searchbar;
-    background-color: grey;
+    background-color: #808080;
     height: 50px;
     margin: 0px 10px 0px 10px;
     border: none;
@@ -411,6 +456,13 @@ section {
 .item4 {
     grid-area: title; 
     }
+
+.item7 {
+    grid-area: input;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 /* *********************************** */
 
