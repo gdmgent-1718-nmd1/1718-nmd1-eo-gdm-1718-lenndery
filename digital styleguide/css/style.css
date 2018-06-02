@@ -1,7 +1,9 @@
 body {
    /* display: flex;
     flex-direction: column;
-    align-items: center; */}
+    align-items: center; */
+    margin: 0px;
+}
 
 a {
     color: inherit;
@@ -49,26 +51,81 @@ section {
 }
 
 /* NAVBAR */
+    .navbar div {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
 
-    .container_navbar a{
+    .navbar_links a{
         align-self: center;
         margin-left: 9px;
         padding-right: 10px;
         border-right: 1px solid black;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
+        font-weight: 700;
+        font-size: 1.2rem;
         text-transform: uppercase;
         letter-spacing: 2px;
     }
 
-    .container_navbar a:last-of-type {
+    .navbar_links a:last-of-type {
         padding-right: 0px;
         border-right: none
+    }
+
+    .navbar_profile {
+        background: rgb(168, 219, 107);
+        padding-right: 0px;
+        border-right: none;
+        padding: 5px;
+    }
+
+    /* ------------------------------------------------- */
+    .navbar_logo {
+        padding: 20px;
+    }
+
+    .navbar_links {
+        justify-content: flex-end;
+    }
+    
+    .navbar_account {
+        display: flex;
+        align-items: center;
+        background: #a8db6b;
+        padding: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .navbar_account a {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile_img {
+        height: 100%;
+        margin-right: 10px;
+        border-radius: 100%;
+        background-size: cover;
+        border: 1px solid black;
     }
 
 /* CONTENT */ 
     .item4 p {
         font-family: 'Roboto Slab', serif;
+    }
+
+    .item4 a {
+        position: relative;
+        border-bottom: 2px solid #a9db6b94;
+        transition: ease-in-out 0.15s;
+    }
+
+    .item4 a:hover {
+        border-bottom: 2px solid #a8db6b;
+        transition: ease-in-out 0.15s;
     }
 
 /* BUTTONS */
@@ -113,6 +170,7 @@ section {
 
 /* CARDS */
     .container_card {
+        position: relative;
         width: 100%;
         cursor: default;
     }
@@ -137,6 +195,23 @@ section {
 
     /* ---------------------------------------------------------- */
 
+    #card_fav {
+        position: absolute;
+        top: 15px; 
+        left: 15px;
+        height: 20px;
+        fill: #df00006c;
+        z-index: 1;
+    }
+
+    #card_fav:hover {
+        fill: #df0000;
+    }
+
+    .fav_added {
+        fill: #df0000;
+    }
+    
     .card_image_info {
         position: absolute;
         bottom: 10px;
@@ -225,7 +300,8 @@ section {
     'header header header header header header'
     'buttons title title title title title'
     'color title title title title title'
-    'cards cards cards cards cards cards';
+    'cards cards cards cards cards cards'
+    'icons icons icons icons icons icons';
     padding: 10px;
 }
 
@@ -244,12 +320,46 @@ section {
 }
 
 .item1 { 
+    display: grid;
+    grid-template-areas: 
+    'navbar'
+    'searchbar';
+    /* grid-template-columns: auto auto 220px; */
     grid-area: header;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-bottom: 10px;
 }
+
+.navbar {
+    display: grid;
+    grid-template-areas: 
+    'navbar_logo navbar_links navbar_account';
+    grid-template-columns: auto auto 220px;
+    grid-area: navbar;
+    background: white;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: 10px 10px 0px 10px;
+}
+
+.searchbar {
+    display: none;
+    grid-area: searchbar;
+    background-color: grey;
+    height: 50px;
+    margin: 0px 10px 0px 10px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.searchbar::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.575);
+}
+
 
 .item2 {
     grid-area: buttons; 
@@ -281,6 +391,10 @@ section {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-auto-columns: minmax(30%, auto);
+}
+
+.item6 {
+    grid-area: icons;
 }
 
 .color {

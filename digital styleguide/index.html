@@ -3,19 +3,34 @@
     <title>Digital Styleguide</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <html>
     <body>
         <div class="grid">
-            <div class="grid-item item1">
-                <img src="images/logo_the_docks_text_right.svg" height="26px">
-                <div class="container_navbar">
-                        <a href="">events</a>
+            <div class="item1">
+                <div class="navbar">
+                    <div class="navbar_logo"><img src="images/logo_the_docks_text_right.svg" height="26px"></div>
+                    <div class="navbar_links">
                         <a href="">programma</a>
                         <a href="">verhuur</a>
                         <a href="">praktisch</a>
-                        <a href="">zoeken</a>
+                        <div onclick="searchbarDisplay()"><img src="icons/baseline-search-24px.svg"></div>
+                    </div>
+                    <div class="navbar_account"><a href=""><div style="background-image:url(images/profile/rick_sanchez.jpg)" class="profile_img"></div>rick sanchez</a></div>
                 </div>
+                <input id="searchbar" autocomplete="off" autofocus="autofocus" class="searchbar" name="q" placeholder="Zoek concerten, artisten, ..." type="text">
+                <script>
+                    function searchbarDisplay() {
+                        var searchbar = document.getElementById("searchbar");
+                        if (searchbar.style.display === "block") {
+                            searchbar.style.display = "none";
+                        } else {
+                            searchbar.style.display = "block";
+                        }
+                        searchbar.focus();
+                    }
+                    </script>
             </div>
             <div class="grid-item item2">
                 <div class="item_title">Buttons</div>
@@ -23,20 +38,24 @@
                 <a href="" style="background:black; color: white" class="button">tickets &amp; info</a>
                 <a href="" style="background:rgb(168, 219, 107); color: black" class="button">tickets &amp; info</a>
             </div>
+
             <div class="grid-item item3">
                 <div class="item_title">Kleuren</div>
                 <div style="background: #a8db6b;" class="color">#a8db6b</div>
                 <div style="background: #000000; color: white;" class="color">#000000;</div>
                 <div style="background: #f3f3f3;" class="color">#f3f3f3;</div>
             </div>
+
             <div class="grid-item item4">
                 <h1>Dit is de eerste titel</h1>
                 <h2>Dit is de tweede titel</h2>
                 <h3>Dit is de derde titel</h3>
-                <p>Dit is een alinea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iste, cum alias doloremque expedita praesentium reprehenderit quae temporibus nulla laborum vitae eligendi neque suscipit necessitatibus consectetur exercitationem nisi sequi? Ipsa?</p>
+                <p>Dit is een alinea, <a href="">en dit een URL</a>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iste, cum alias doloremque expedita praesentium reprehenderit quae temporibus nulla laborum vitae eligendi neque suscipit necessitatibus consectetur exercitationem nisi sequi? Ipsa?</p>
             </div>
+
             <div class="grid-item item5">
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="fav_added" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/warhola.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Warhola</h1>
@@ -57,6 +76,7 @@
                 </div>
         
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="fav_added" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/blackwave_2.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Blackwave</h1>
@@ -76,6 +96,7 @@
                 </div>  
         
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="fav_added" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/panic_at_the_disco2.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Panic at the Disco</h1>
@@ -96,6 +117,7 @@
                 </div>
                 
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/years_and_years.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Years &amp; Years</h1>
@@ -119,6 +141,7 @@
                 </div>
 
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/coely.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Coely</h1>
@@ -138,6 +161,7 @@
                 </div>
 
                 <div class="container_card">
+                    <svg id="card_fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18.35"><title>baseline-favorite-24px</title><path class="" d="M12,21.35,10.55,20C5.4,15.36,2,12.28,2,8.5A5.45,5.45,0,0,1,7.5,3,6,6,0,0,1,12,5.09,6,6,0,0,1,16.5,3,5.45,5.45,0,0,1,22,8.5c0,3.78-3.4,6.86-8.55,11.54Z" transform="translate(-2 -3)"/></svg>
                     <div style="background-image: url(images/oscar.jpg)" class="card_image">
                         <div class="card_image_info"> 
                             <h1>Oscar and the Wolf</h1>
@@ -155,6 +179,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="grid-item item6">
+                <div class="item_title">Iconen</div>
             </div>
         </div>
 
