@@ -1,3 +1,5 @@
+/* SEARCHBAR */
+
 var searchbar = document.getElementById("searchbar");
                     
 searchbar.style.transition = "all 0.2s";
@@ -22,4 +24,16 @@ function searchbarnoopacity() {
 
 function searchbaropacity() {
     searchbar.style.opacity = "0.5";
+}
+
+/* FAV */
+
+var fav = document.getElementById("card_fav");
+
+function favSelect() {
+    if (this.style.fill === "#df0000") {
+        this.style.fill = "#df00006c";
+    } else {
+        this.style.fill = "#df0000";
+    }
 }
