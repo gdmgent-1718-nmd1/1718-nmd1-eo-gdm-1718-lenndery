@@ -444,7 +444,13 @@ input {
 
 .item6 {
     grid-area: icons;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
 }
+
+.item6 img {margin-right: 10px;}
 
 .color {
     font-family: 'Montserrat', sans-serif;
